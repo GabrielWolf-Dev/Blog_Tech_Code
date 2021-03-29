@@ -5,7 +5,43 @@
     text-align: center;
 }
 
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $black;
+}
+
+.subtitle {
+    font-size: 1.65rem;
+    font-weight: 500;
+    color: $black;
+}
+
+.paragraph {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $black;
+    padding: 16px 0;
+}
+
+.subContent {
+    font-size: 1.25rem;
+    font-weight: lighter;
+    color: $black;
+    padding: 16px 0;
+}
+
+.button {
+    width: 120px;
+    min-height: 42px;
+    padding: 8px 2%;
+    border-radius: 12px;
+    border: 2px solid $whiteBlue;
+    background-color: $aquaGreen;
+    cursor: pointer;
+}
+
 .activeMenu {
-    left: 50%;
+    clip-path: circle(1200px at 90% -10%);
     opacity: 1;
 }

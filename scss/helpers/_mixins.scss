@@ -3,3 +3,22 @@
     justify-content: $justify-content;
     align-items: center;
 }
+
+@mixin widthParagraph($value) {
+    width: 100%;
+    max-width: $value;
+    padding: 0 2%;
+    text-align: left;
+}
+
+@mixin mainStyle() {
+    width: 100%;
+    padding: 128px 0;
+    background-color: $white;
+}
+
+@mixin defaultBox($value) {
+    width: 100%;
+    padding: 48px 2%;
+    background-color: $value;
+}

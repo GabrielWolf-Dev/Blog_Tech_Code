@@ -1,10 +1,11 @@
-// Bases:
-@import './bases/reset';
-@import './bases/defaultStyles';
-
 // Helpers:
 @import './helpers/variables';
 @import './helpers/mixins';
 
+// Bases:
+@import './bases/reset';
+@import './bases/defaultStyles';
+
 // Layout:
 @import './layout/header';
+@import './layout/home';

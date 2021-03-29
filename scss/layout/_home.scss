@@ -1,0 +1,48 @@
+.home__main {
+    @include mainStyle();
+
+    .banner {
+        width: 100%;
+        padding: 24px 0;
+        @include flex(space-between);
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            height: 340px;
+        }
+
+        .content {
+            @include widthParagraph(500px);
+        }
+
+        @media screen and (max-width: 768px) {
+            @include flex(center);
+            flex-direction: column;
+
+            img {
+                margin: 24px 0;
+            }
+        }
+    }
+
+    .categories {
+        @include defaultBox($aquaGreen);
+
+        ul {
+            padding: 24px 2%;
+            @include flex(center);
+            flex-wrap: wrap;
+
+            li {
+                margin: 16px;
+            }
+
+            a {
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+            }
+        }
+    }
+}
