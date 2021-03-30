@@ -3,7 +3,7 @@
 
     .banner {
         width: 100%;
-        padding: 24px 0;
+        padding: 32px 0;
         @include flex(space-between);
 
         img {
@@ -42,6 +42,59 @@
                 width: 100%;
                 height: 100%;
                 text-decoration: none;
+            }
+        }
+    }
+
+    .lastPosts {
+        @include defaultBox($white);
+        text-align: center;
+        
+        .subtitle {
+            margin-bottom: 32px;
+        }
+
+        .posts {
+            @include flex(center);
+            flex-wrap: wrap;
+
+            .post {
+                display: inline-block;
+                margin: 16px;
+                text-align: left;
+                            
+                .post__author {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin: 0 16px -4px 0;
+                }
+
+                .authorName {
+                    @extend .subContent;
+                    display: inline-block;
+                    margin: 0 -4px -4px 0;
+                    vertical-align: top;
+                }
+
+                .post__content {
+                    padding: 24px 0;
+
+                    .post__title {
+                        @extend .subtitle;
+                        color: $black;
+                        transition: all ease 0.3s;
+
+                        &:hover {
+                            color: $whiteBlue;
+                        }
+                    }
+
+                    .post__description {
+                        @extend .paragraph;
+                    }
+                }
             }
         }
     }

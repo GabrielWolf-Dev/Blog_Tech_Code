@@ -41,7 +41,20 @@
     cursor: pointer;
 }
 
+.btnPosts {
+    @extend .button;
+    margin: 8px;
+}
+
 .activeMenu {
     clip-path: circle(1200px at 90% -10%);
     opacity: 1;
+}
+
+.post {
+    width: 100%;
+    max-width: 350px;
+    padding: 16px 2%;
+    background-color: $aquaGreen;
+    border-radius: 12px;
 }
