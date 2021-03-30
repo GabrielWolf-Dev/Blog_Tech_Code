@@ -4,9 +4,9 @@
     align-items: center;
 }
 
-@mixin widthParagraph($value) {
+@mixin widthParagraph($width) {
     width: 100%;
-    max-width: $value;
+    max-width: $width;
     padding: 0 2%;
     text-align: left;
 }
@@ -17,8 +17,15 @@
     background-color: $white;
 }
 
-@mixin defaultBox($value) {
+@mixin defaultBox($bgColor) {
     width: 100%;
     padding: 48px 2%;
-    background-color: $value;
+    background-color: $bgColor;
+}
+
+@mixin defaultLink($color) {
+    color: $color;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: all ease 0.3s;
 }

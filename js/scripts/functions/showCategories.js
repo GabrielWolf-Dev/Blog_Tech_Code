@@ -1,12 +1,19 @@
 import categories from '../db/categories.js';
 
-const categoriesList = document.getElementById('categoriesList');
+const sectionCategories = document.querySelector('.categories #categoriesList');
+const sectionKnowMore = document.querySelector('.knowMore #categoriesList');
 
 function showCategories() {
     categories.map((category) => {
-        categoriesList.innerHTML += `
+        sectionCategories.innerHTML += `
             <li>
-                <button class="button"><a class="subContent" href="#">${category}</a></button>
+                <button class="button"><a data-category class="subContent" href="artigos.html">${category}</a></button>
+            </li>
+        `;
+
+        sectionKnowMore.innerHTML += `
+            <li>
+                <a href="#">${category}</a>
             </li>
         `;
     });

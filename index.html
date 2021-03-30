@@ -13,16 +13,16 @@
 <body>
     <header>
         <div class="container">
-            <img class="logo" src="./assets/svg/code.svg" alt="Logo do site" />
+            <a href="index.html"><img class="logo" src="./assets/svg/code.svg" alt="Logo do site" /></a>
             <nav>
                 <div class="iconMobile">
                     <i class="fas fa-bars"></i>
                 </div><!--iconMobile-->
                 <ul id="nav">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#">Artigos</a></li>
                     <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Creditos</a></li>
+                    <li><a href="#Creditos">Creditos</a></li>
                 </ul>
             </nav><!--menuDesktop-->
         </div><!--container-->
@@ -54,17 +54,40 @@
 
         <section class="lastPosts">
             <h2 class="subtitle">Ultimos Artigos</h2><!--subtitle-->
-            <div id="lastPosts" class="posts container">
-
-                
-                
-            </div><!--posts container-->
+            <div id="lastPosts" class="posts container"></div><!--posts container-->
         </section><!--lastPosts-->
     </main><!--home__main-->
+
+    <section class="knowMore">
+        <div class="container">
+            <h2 class="subtitle">Saiba mais</h2><!--subtitle-->
+            <ul id="categoriesList"></ul>
+        </div><!--container-->
+    </section><!--knowMore-->
+
+    <footer id="Creditos">
+        <div class="container">
+            <div class="developer">
+                <h3>Desenvolvido por Gabriel Wolf</h3>
+                <ul>
+                    <li>
+                        <a target="__blank" href="https://github.com/GabrielWolf-Dev"><i class="fab fa-github-square"></i></a>
+                    </li>
+                    <li>
+                        <a target="__blank" href="#"><i class="fab fa-linkedin"></i></i></a>
+                    </li>
+                </ul>
+            </div><!--developer-->
+            <div class="credits">
+                <ul>
+                    <li><a target="__blank" href="https://undraw.co/">Vetores de undraw</a></li>
+                    <li><a target="__blank" href="https://fontawesome.com/">Ícones de Font Awesome</a></li>
+                    <li>Icons made by <a target="__blank" href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a target="__blank" href="https://www.flaticon.com/"title="Flaticon">www.flaticon.com</a></li>
+                </ul>
+            </div><!--credits-->
+        </div><!--container-->
+    </footer>
     <script src="./js/scripts/tools/all.min.js"></script>
     <script src="./js/index.js" type="module"></script>
 </body>
 </html>
-
-<!-- Atribution in the Footer -- Icon:
-     <div>Icons made by <a href="" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/"title="Flaticon">www.flaticon.com</a></div>-->

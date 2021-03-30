@@ -49,7 +49,7 @@ ul {
   color: #292929;
 }
 
-.paragraph, .home__main .lastPosts .posts .post .post__content .post__description {
+.paragraph, .home__main .lastPosts .posts .post .post__content .post__description, footer .developer h3 {
   font-size: 1.4rem;
   font-weight: 400;
   color: #292929;
@@ -167,8 +167,8 @@ header ul li a:hover {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     background-color: #6DD1AE;
-    -webkit-transition: all ease-in-out 0.5s;
-    transition: all ease-in-out 0.5s;
+    -webkit-transition: all ease-in-out 0.6s;
+    transition: all ease-in-out 0.6s;
     opacity: 0;
     -webkit-clip-path: circle(100px at 90% -10%);
             clip-path: circle(100px at 90% -10%);
@@ -256,6 +256,7 @@ header ul li a:hover {
   }
   .home__main .banner img {
     margin: 24px 0;
+    padding: 0 2%;
   }
 }
 
@@ -329,6 +330,13 @@ header ul li a:hover {
   margin: 0 16px -4px 0;
 }
 
+@media screen and (max-width: 768px) {
+  .home__main .lastPosts .posts .post .post__author {
+    width: 42px;
+    height: 42px;
+  }
+}
+
 .home__main .lastPosts .posts .post .authorName {
   display: inline-block;
   margin: 0 -4px -4px 0;
@@ -346,6 +354,128 @@ header ul li a:hover {
 }
 
 .home__main .lastPosts .posts .post .post__content .post__title:hover {
+  color: #36ACCF;
+}
+
+.knowMore {
+  width: 100%;
+  padding: 48px 2%;
+  background-color: #6DD1AE;
+  height: 250px;
+}
+
+.knowMore ul {
+  padding: 24px 2%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.knowMore ul a {
+  color: #292929;
+  font-size: 1.4rem;
+  text-decoration: none;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.knowMore ul a:hover {
+  color: #36ACCF;
+}
+
+footer {
+  width: 100%;
+  padding: 48px 2%;
+  background-color: #073447;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  footer .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+footer .developer h3 {
+  color: white;
+}
+
+footer .developer ul {
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  footer .developer ul {
+    text-align: center;
+  }
+}
+
+footer .developer ul li {
+  display: inline-block;
+  margin: 16px;
+}
+
+footer .developer ul li a {
+  color: white;
+  font-size: 1.4rem;
+  text-decoration: none;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  font-size: 2.65rem;
+}
+
+footer .developer ul li a:hover {
+  color: #36ACCF;
+}
+
+footer .credits ul {
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  footer .credits ul {
+    text-align: center;
+  }
+}
+
+footer .credits ul li {
+  font-size: 1.4rem;
+  margin: 16px 0;
+  color: white;
+}
+
+footer .credits ul li a {
+  color: white;
+  font-size: 1.4rem;
+  text-decoration: none;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+footer .credits ul li a:hover {
   color: #36ACCF;
 }
 /*# sourceMappingURL=main.css.map */

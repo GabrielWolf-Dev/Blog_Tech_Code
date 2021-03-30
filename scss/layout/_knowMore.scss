@@ -1,0 +1,20 @@
+.knowMore {
+    @include defaultBox($aquaGreen);
+    height: 250px;
+
+    ul {
+        padding: 24px 2%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 16px;
+
+        a {
+            @include defaultLink($black);
+            text-decoration-line: underline;
+
+            &:hover {
+                color: $whiteBlue;
+            }
+        }
+    }
+}
