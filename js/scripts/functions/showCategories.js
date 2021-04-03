@@ -3,20 +3,22 @@ import categories from '../db/categories.js';
 const sectionCategories = document.querySelector('.categories #categoriesList');
 const sectionKnowMore = document.querySelector('.knowMore #categoriesList');
 
-function showCategories() {
-    categories.map((category) => {
+export function showCategories() {
+    categories.forEach((category) => {
         sectionCategories.innerHTML += `
             <li>
-                <button class="button"><a data-category class="subContent" href="artigos.html">${category}</a></button>
-            </li>
-        `;
-
-        sectionKnowMore.innerHTML += `
-            <li>
-                <a href="#">${category}</a>
+                <button class="button"><a data-category class="subContent" href="posts.html">${category}</a></button>
             </li>
         `;
     });
 }
 
-export default showCategories;
+export function showKnowMore() {
+    categories.forEach((category) => {
+        sectionKnowMore.innerHTML += `
+            <li>
+                <a data-category href="posts.html">${category}</a>
+            </li>
+        `;
+    });
+}

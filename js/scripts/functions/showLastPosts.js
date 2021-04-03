@@ -5,7 +5,7 @@ const totalBlogs = blogs.length;
 const minimum = totalBlogs - 5;
 
 export default function showLastPosts() {
-    blogs.map((posts) => {
+    blogs.forEach((posts) => {
         if(posts.id >= minimum){ // Max de Last Posts serão 10.
             lastPosts.innerHTML += `
             <article class="post">

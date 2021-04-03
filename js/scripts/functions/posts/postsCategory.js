@@ -9,5 +9,6 @@ export default function postsCategory() {
 function saveData(element) {
     //console.log(element.target.outerText);
     const categoryValue = element.target.outerText;
+    localStorage.removeItem('category');
     localStorage.setItem('category', categoryValue);
 }

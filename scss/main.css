@@ -160,10 +160,9 @@ header ul li a:hover {
 @media screen and (max-width: 768px) {
   header ul {
     width: 100%;
-    height: 100vh;
     position: fixed;
     right: -50%;
-    top: 11vh;
+    top: 10vh;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     background-color: #6DD1AE;
@@ -172,27 +171,15 @@ header ul li a:hover {
     opacity: 0;
     -webkit-clip-path: circle(100px at 90% -10%);
             clip-path: circle(100px at 90% -10%);
+    padding: 2px 0;
   }
   header ul li {
     width: 100%;
-    height: calc(90% / 4);
+    padding: 32px 2%;
     border-bottom: 2px solid #292929;
-  }
-  header ul li:last-child {
-    border-bottom: none;
   }
   header ul li a {
     width: inherit;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   header ul li a:hover {
     background-color: white;
