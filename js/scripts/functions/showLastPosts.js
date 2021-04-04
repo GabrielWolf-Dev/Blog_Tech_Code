@@ -12,7 +12,7 @@ export default function showLastPosts() {
                 <img class="post__author" src="${posts.imgAuthor}"  alt="Author do post" />
                 <h3 class="authorName">${posts.author}</h3><!--authorName-->
                 <div class="post__content">
-                    <a class="post__title" href="#">${posts.title}</a>
+                    <a class="post__title" href="post.html" data-id=${posts.id}>${posts.title}</a>
                     <p class="post__description">${posts.description}</p><!--post__description-->
                 </div><!--post__content-->
                 ${posts.categories.map((category) => `<button class="btnPosts">${category}</button><!--button-->`).join(' ')}

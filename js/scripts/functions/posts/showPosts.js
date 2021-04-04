@@ -13,7 +13,7 @@ export default function showPosts() {
                         <img class="post__author" src="${post.imgAuthor}"  alt="Author do post" />
                         <h3 class="authorName">${post.author}</h3><!--authorName-->
                         <div class="post__content">
-                            <a class="post__title" href="#">${post.title}</a>
+                            <a class="post__title" href="post.html" data-id=${post.id}>${post.title}</a>
                             <p class="post__description">${post.description}</p><!--post__description-->
                         </div><!--post__content-->
                         ${post.categories.map((category) => `<button class="btnPosts">${category}</button><!--button-->`).join(' ')}

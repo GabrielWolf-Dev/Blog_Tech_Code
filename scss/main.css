@@ -43,20 +43,20 @@ ul {
   color: #292929;
 }
 
-.subtitle, .home__main .lastPosts .posts .post .post__content .post__title {
+.subtitle, .lastPosts .posts .post .post__content .post__title {
   font-size: 1.65rem;
   font-weight: 500;
   color: #292929;
 }
 
-.paragraph, .home__main .lastPosts .posts .post .post__content .post__description, footer .developer h3 {
+.paragraph, .lastPosts .posts .post .post__content .post__description, footer .developer h3 {
   font-size: 1.4rem;
   font-weight: 400;
   color: #292929;
   padding: 16px 0;
 }
 
-.subContent, .home__main .lastPosts .posts .post .authorName {
+.subContent, .lastPosts .posts .post .authorName {
   font-size: 1.25rem;
   font-weight: lighter;
   color: #292929;
@@ -89,6 +89,72 @@ ul {
   padding: 16px 2%;
   background-color: #6DD1AE;
   border-radius: 12px;
+}
+
+.lastPosts {
+  width: 100%;
+  padding: 48px 2%;
+  background-color: white;
+  text-align: center;
+}
+
+.lastPosts .subtitle, .lastPosts .posts .post .post__content .post__title {
+  margin-bottom: 32px;
+}
+
+.lastPosts .posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.lastPosts .posts .post {
+  display: inline-block;
+  margin: 16px;
+  text-align: left;
+}
+
+.lastPosts .posts .post .post__author {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 16px -4px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .lastPosts .posts .post .post__author {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+.lastPosts .posts .post .authorName {
+  display: inline-block;
+  margin: 0 -4px -4px 0;
+  vertical-align: top;
+}
+
+.lastPosts .posts .post .post__content {
+  padding: 24px 0;
+}
+
+.lastPosts .posts .post .post__content .post__title {
+  color: #292929;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.lastPosts .posts .post .post__content .post__title:hover {
+  color: #36ACCF;
 }
 
 header {
@@ -278,70 +344,11 @@ header ul li a:hover {
   text-decoration: none;
 }
 
-.home__main .lastPosts {
+.postsBox {
   width: 100%;
-  padding: 48px 2%;
+  padding: 128px 0;
   background-color: white;
   text-align: center;
-}
-
-.home__main .lastPosts .subtitle, .home__main .lastPosts .posts .post .post__content .post__title {
-  margin-bottom: 32px;
-}
-
-.home__main .lastPosts .posts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.home__main .lastPosts .posts .post {
-  display: inline-block;
-  margin: 16px;
-  text-align: left;
-}
-
-.home__main .lastPosts .posts .post .post__author {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 16px -4px 0;
-}
-
-@media screen and (max-width: 768px) {
-  .home__main .lastPosts .posts .post .post__author {
-    width: 42px;
-    height: 42px;
-  }
-}
-
-.home__main .lastPosts .posts .post .authorName {
-  display: inline-block;
-  margin: 0 -4px -4px 0;
-  vertical-align: top;
-}
-
-.home__main .lastPosts .posts .post .post__content {
-  padding: 24px 0;
-}
-
-.home__main .lastPosts .posts .post .post__content .post__title {
-  color: #292929;
-  -webkit-transition: all ease 0.3s;
-  transition: all ease 0.3s;
-}
-
-.home__main .lastPosts .posts .post .post__content .post__title:hover {
-  color: #36ACCF;
 }
 
 .knowMore {

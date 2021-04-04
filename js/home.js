@@ -2,6 +2,7 @@ import menuMobile from './scripts/functions/menuMobile.js';
 import { showCategories, showKnowMore } from './scripts/functions/showCategories.js';
 import showLastPosts from './scripts/functions/showLastPosts.js';
 import postsCategory from './scripts/functions/posts/postsCategory.js';
+import selectPost from './scripts/functions/selectPost.js';
 
 window.onload = () => {
     menuMobile();
@@ -9,4 +10,5 @@ window.onload = () => {
     showKnowMore();
     showLastPosts();
     postsCategory();
+    selectPost();
 }
