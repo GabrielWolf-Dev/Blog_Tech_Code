@@ -59,6 +59,26 @@
     border-radius: 12px;
 }
 
+.imgAuthor {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 16px -4px 0;
+
+    @media screen and (max-width: 768px) {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+.authorName {
+    @extend .subContent;
+    display: inline-block;
+    margin: 0 -4px -4px 0;
+    vertical-align: top;
+}
+
 .lastPosts {
     @include defaultBox($white);
     text-align: center;
@@ -77,23 +97,7 @@
             text-align: left;
                         
             .post__author {
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                display: inline-block;
-                margin: 0 16px -4px 0;
-
-                @media screen and (max-width: 768px) {
-                    width: 42px;
-                    height: 42px;
-                }
-            }
-
-            .authorName {
-                @extend .subContent;
-                display: inline-block;
-                margin: 0 -4px -4px 0;
-                vertical-align: top;
+                @extend .imgAuthor;
             }
 
             .post__content {
@@ -115,4 +119,22 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 768px){
+        .title {
+            font-size: 1.65rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+        }
+
+        .paragraph {
+            font-size: 1.15rem;
+        }
+
+        .subContent {
+            font-size: 1rem;
+        }
 }

@@ -30,7 +30,7 @@ ul {
   list-style-type: none;
 }
 
-.container {
+.container, .postsBox #readPost {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
@@ -56,7 +56,7 @@ ul {
   padding: 16px 0;
 }
 
-.subContent, .lastPosts .posts .post .authorName {
+.subContent, .authorName {
   font-size: 1.25rem;
   font-weight: lighter;
   color: #292929;
@@ -91,6 +91,27 @@ ul {
   border-radius: 12px;
 }
 
+.imgAuthor, .lastPosts .posts .post .post__author {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 16px -4px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .imgAuthor, .lastPosts .posts .post .post__author {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+.authorName {
+  display: inline-block;
+  margin: 0 -4px -4px 0;
+  vertical-align: top;
+}
+
 .lastPosts {
   width: 100%;
   padding: 48px 2%;
@@ -122,27 +143,6 @@ ul {
   text-align: left;
 }
 
-.lastPosts .posts .post .post__author {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 16px -4px 0;
-}
-
-@media screen and (max-width: 768px) {
-  .lastPosts .posts .post .post__author {
-    width: 42px;
-    height: 42px;
-  }
-}
-
-.lastPosts .posts .post .authorName {
-  display: inline-block;
-  margin: 0 -4px -4px 0;
-  vertical-align: top;
-}
-
 .lastPosts .posts .post .post__content {
   padding: 24px 0;
 }
@@ -155,6 +155,21 @@ ul {
 
 .lastPosts .posts .post .post__content .post__title:hover {
   color: #36ACCF;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1.65rem;
+  }
+  .subtitle, .lastPosts .posts .post .post__content .post__title {
+    font-size: 1.4rem;
+  }
+  .paragraph, .lastPosts .posts .post .post__content .post__description, footer .developer h3 {
+    font-size: 1.15rem;
+  }
+  .subContent, .authorName {
+    font-size: 1rem;
+  }
 }
 
 header {
@@ -170,7 +185,7 @@ header .logo {
   cursor: pointer;
 }
 
-header .container {
+header .container, header .postsBox #readPost, .postsBox header #readPost {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,6 +366,54 @@ header ul li a:hover {
   text-align: center;
 }
 
+.postsBox #readPost {
+  padding: 32px 2%;
+}
+
+.postsBox #readPost p {
+  text-align: left;
+  padding: 16px 2%;
+}
+
+.postsBox #readPost p strong {
+  margin: 24px 0;
+}
+
+.postsBox #readPost figure > img {
+  width: 100%;
+  max-width: 800px;
+}
+
+.postsBox #readPost .boxAuthor {
+  text-align: center;
+  padding: 24px 2%;
+}
+
+.postsBox #readPost h1 a {
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.postsBox #readPost h1 a:hover {
+  color: #36ACCF;
+}
+
+@media screen and (max-width: 768px) {
+  .postsBox #readPost {
+    width: 100%;
+    max-width: 400px;
+    padding: 32px 4%;
+    text-align: left;
+  }
+  .postsBox #readPost .paragraph, .postsBox #readPost .lastPosts .posts .post .post__content .post__description, .lastPosts .posts .post .post__content .postsBox #readPost .post__description, .postsBox #readPost footer .developer h3, footer .developer .postsBox #readPost h3 {
+    font-size: 1.15rem;
+  }
+  .postsBox #readPost .boxAuthor {
+    text-align: left;
+    padding: 24px 2%;
+  }
+}
+
 .knowMore {
   width: 100%;
   padding: 48px 2%;
@@ -387,7 +450,7 @@ footer {
   background-color: #073447;
 }
 
-footer .container {
+footer .container, footer .postsBox #readPost, .postsBox footer #readPost {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -400,7 +463,7 @@ footer .container {
 }
 
 @media screen and (max-width: 768px) {
-  footer .container {
+  footer .container, footer .postsBox #readPost, .postsBox footer #readPost {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;

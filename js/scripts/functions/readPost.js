@@ -7,8 +7,12 @@ export default function readPost() {
         if(blog.id === Number(localStorage.getItem('idPost'))){
             console.log('entrou!!');
             currentPost.innerHTML += `
-                <h1 class="title">${blog.title}</h1>
-                <h2 class="subContent">${blog.pubDate}</h2>
+                <h1><a target="__blank" class="title" href="${blog.link}">${blog.title}</a></h1>
+                <div class="boxAuthor">
+                    <img class="imgAuthor" src=${blog.imgAuthor} alt="Imagem de ${blog.author}" />
+                    <h2 class="authorName">${blog.author}</h2>
+                    <h3 class="subContent">${blog.pubDate}</h3>
+                </div><!--boxAuthor-->
                 ${blog.content.replace(/<p>/g, '<p class="paragraph">')}
             `;
         }else {

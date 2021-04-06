@@ -1,4 +1,56 @@
 .postsBox {
     @include mainStyle();
     text-align: center;
+
+    #readPost {
+        @extend .container;
+        padding: 32px 2%;
+
+        p {
+            text-align: left;
+            padding: 16px 2%;
+
+            strong {
+                margin: 24px 0;
+            }
+        }
+
+        figure > img {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .boxAuthor {
+            text-align: center;
+            padding: 24px 2%;
+        }
+
+        h1 {
+            a {
+                transition: all ease 0.3s;
+
+                &:hover {
+                    color: $whiteBlue;
+                }
+            }
+        }
+        
+
+        @media screen and (max-width: 768px){
+            width: 100%;
+            max-width: 400px;
+            padding: 32px 4%;
+            text-align: left;
+
+            .paragraph {
+                font-size: 1.15rem;
+            }
+
+            .boxAuthor {
+                text-align: left;
+                padding: 24px 2%;
+            }
+
+        }
+    }
 }
