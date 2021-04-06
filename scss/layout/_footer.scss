@@ -1,5 +1,6 @@
 footer {
     @include defaultBox($cianBlue);
+    padding: 16px 2%;
 
     .container {
         @include flex(space-between);
@@ -11,25 +12,24 @@ footer {
     }
 
     .developer {
+        @include flex(center);
+
         h3 {
             @extend .paragraph;
             color: $white;
+            font-size: 1.25rem;
         }
 
         ul {
             text-align: left;
 
-            @media screen and (max-width: 768px){
-                text-align: center;
-            }
-
             li {
                 display: inline-block;
-                margin: 16px;
+                margin: 8px;
     
                 a {
                     @include defaultLink($white);
-                    font-size: 2.65rem;
+                    font-size: 2rem;
     
                     &:hover {
                         color: $whiteBlue;
@@ -39,28 +39,12 @@ footer {
         }
     }
 
-    .credits {
-        ul {
-            text-align: left;
+    a {
+        @include defaultLink($white);
+        font-size: 1.25rem;
 
-            @media screen and (max-width: 768px){
-                text-align: center;
-            }
-
-            li {
-                font-size: 1.4rem;
-                margin: 16px 0;
-                color: $white;
-
-                a {
-                    @include defaultLink($white);
-                    text-decoration-line: underline;
-
-                    &:hover {
-                        color: $whiteBlue;
-                    }
-                }
-            }
+        &:hover {
+            color: $whiteBlue;
         }
     }
 }

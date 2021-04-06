@@ -13,7 +13,7 @@ export default function readPost() {
                     <h2 class="authorName">${blog.author}</h2>
                     <h3 class="subContent">${blog.pubDate}</h3>
                 </div><!--boxAuthor-->
-                ${blog.content.replace(/<p>/g, '<p class="paragraph">')}
+                ${blog.content}
             `;
         }else {
             console.log('não entro');

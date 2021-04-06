@@ -1,0 +1,24 @@
+.credits {
+    width: 100%;
+    background-color: $aquaGreen;
+    padding: 48px 2%;
+    text-align: center;
+
+    ul {
+        li {
+            font-size: 1.15rem;
+            margin: 16px 0;
+            color: $black;
+
+            a {
+                @include defaultLink($black);
+                text-decoration-line: underline;
+                font-size: 1.15rem;
+
+                &:hover {
+                    color: $whiteBlue;
+                }
+            }
+        }
+    }
+}

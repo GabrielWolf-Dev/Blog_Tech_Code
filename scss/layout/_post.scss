@@ -7,6 +7,7 @@
         padding: 32px 2%;
 
         p {
+            @extend .paragraph;
             text-align: left;
             padding: 16px 2%;
 

@@ -49,7 +49,7 @@ ul {
   color: #292929;
 }
 
-.paragraph, .lastPosts .posts .post .post__content .post__description, footer .developer h3 {
+.paragraph, .lastPosts .posts .post .post__content .post__description, .postsBox #readPost p, footer .developer h3 {
   font-size: 1.4rem;
   font-weight: 400;
   color: #292929;
@@ -164,7 +164,7 @@ ul {
   .subtitle, .lastPosts .posts .post .post__content .post__title {
     font-size: 1.4rem;
   }
-  .paragraph, .lastPosts .posts .post .post__content .post__description, footer .developer h3 {
+  .paragraph, .lastPosts .posts .post .post__content .post__description, .postsBox #readPost p, footer .developer h3 {
     font-size: 1.15rem;
   }
   .subContent, .authorName {
@@ -405,7 +405,7 @@ header ul li a:hover {
     padding: 32px 4%;
     text-align: left;
   }
-  .postsBox #readPost .paragraph, .postsBox #readPost .lastPosts .posts .post .post__content .post__description, .lastPosts .posts .post .post__content .postsBox #readPost .post__description, .postsBox #readPost footer .developer h3, footer .developer .postsBox #readPost h3 {
+  .postsBox #readPost .paragraph, .postsBox #readPost .lastPosts .posts .post .post__content .post__description, .lastPosts .posts .post .post__content .postsBox #readPost .post__description, .postsBox #readPost p, .postsBox #readPost footer .developer h3, footer .developer .postsBox #readPost h3 {
     font-size: 1.15rem;
   }
   .postsBox #readPost .boxAuthor {
@@ -448,6 +448,7 @@ footer {
   width: 100%;
   padding: 48px 2%;
   background-color: #073447;
+  padding: 16px 2%;
 }
 
 footer .container, footer .postsBox #readPost, .postsBox footer #readPost {
@@ -474,23 +475,30 @@ footer .container, footer .postsBox #readPost, .postsBox footer #readPost {
   }
 }
 
+footer .developer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 footer .developer h3 {
   color: white;
+  font-size: 1.25rem;
 }
 
 footer .developer ul {
   text-align: left;
 }
 
-@media screen and (max-width: 768px) {
-  footer .developer ul {
-    text-align: center;
-  }
-}
-
 footer .developer ul li {
   display: inline-block;
-  margin: 16px;
+  margin: 8px;
 }
 
 footer .developer ul li a {
@@ -499,40 +507,51 @@ footer .developer ul li a {
   text-decoration: none;
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
-  font-size: 2.65rem;
+  font-size: 2rem;
 }
 
 footer .developer ul li a:hover {
   color: #36ACCF;
 }
 
-footer .credits ul {
-  text-align: left;
-}
-
-@media screen and (max-width: 768px) {
-  footer .credits ul {
-    text-align: center;
-  }
-}
-
-footer .credits ul li {
+footer a {
+  color: white;
   font-size: 1.4rem;
-  margin: 16px 0;
-  color: white;
+  text-decoration: none;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  font-size: 1.25rem;
 }
 
-footer .credits ul li a {
-  color: white;
+footer a:hover {
+  color: #36ACCF;
+}
+
+.credits {
+  width: 100%;
+  background-color: #6DD1AE;
+  padding: 48px 2%;
+  text-align: center;
+}
+
+.credits ul li {
+  font-size: 1.15rem;
+  margin: 16px 0;
+  color: #292929;
+}
+
+.credits ul li a {
+  color: #292929;
   font-size: 1.4rem;
   text-decoration: none;
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+  font-size: 1.15rem;
 }
 
-footer .credits ul li a:hover {
+.credits ul li a:hover {
   color: #36ACCF;
 }
 /*# sourceMappingURL=main.css.map */
