@@ -7,7 +7,7 @@ export default function showPosts() {
     blogs.forEach((post) => {
         post.categories.forEach((category => {
             if(category === localStorage.getItem('category')){
-                title.textContent = `Posts ${post.mainCategory}`;
+                title.textContent = `Posts ${localStorage.getItem('category')}`;
                 posts.innerHTML += `
                     <article class="post">
                         <img class="post__author" src="${post.imgAuthor}"  alt="Author do post" />

@@ -30,7 +30,7 @@ ul {
   list-style-type: none;
 }
 
-.container, .postsBox #readPost {
+.container, .postsBox #readPost, .about {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
@@ -49,7 +49,7 @@ ul {
   color: #292929;
 }
 
-.paragraph, .lastPosts .posts .post .post__content .post__description, .postsBox #readPost p, footer .developer h3 {
+.paragraph, .lastPosts .posts .post .post__content .post__description, .postsBox #readPost p, .about .about__content ul, footer .developer h3 {
   font-size: 1.4rem;
   font-weight: 400;
   color: #292929;
@@ -112,6 +112,15 @@ ul {
   vertical-align: top;
 }
 
+.boxBlack--active {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
 .lastPosts {
   width: 100%;
   padding: 48px 2%;
@@ -164,7 +173,7 @@ ul {
   .subtitle, .lastPosts .posts .post .post__content .post__title {
     font-size: 1.4rem;
   }
-  .paragraph, .lastPosts .posts .post .post__content .post__description, .postsBox #readPost p, footer .developer h3 {
+  .paragraph, .lastPosts .posts .post .post__content .post__description, .postsBox #readPost p, .about .about__content ul, footer .developer h3 {
     font-size: 1.15rem;
   }
   .subContent, .authorName {
@@ -176,6 +185,7 @@ header {
   width: 100%;
   padding: 20px 4%;
   background-color: #073447;
+  z-index: 1;
 }
 
 header .logo {
@@ -185,7 +195,7 @@ header .logo {
   cursor: pointer;
 }
 
-header .container, header .postsBox #readPost, .postsBox header #readPost {
+header .container, header .postsBox #readPost, .postsBox header #readPost, header .about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -405,7 +415,7 @@ header ul li a:hover {
     padding: 32px 4%;
     text-align: left;
   }
-  .postsBox #readPost .paragraph, .postsBox #readPost .lastPosts .posts .post .post__content .post__description, .lastPosts .posts .post .post__content .postsBox #readPost .post__description, .postsBox #readPost p, .postsBox #readPost footer .developer h3, footer .developer .postsBox #readPost h3 {
+  .postsBox #readPost .paragraph, .postsBox #readPost .lastPosts .posts .post .post__content .post__description, .lastPosts .posts .post .post__content .postsBox #readPost .post__description, .postsBox #readPost p, .postsBox #readPost .about .about__content ul, .about .about__content .postsBox #readPost ul, .postsBox #readPost footer .developer h3, footer .developer .postsBox #readPost h3 {
     font-size: 1.15rem;
   }
   .postsBox #readPost .boxAuthor {
@@ -444,6 +454,48 @@ header ul li a:hover {
   color: #36ACCF;
 }
 
+.about {
+  padding: 130px 4%;
+}
+
+.about img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 32px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .about img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+  }
+}
+
+.about .about__content {
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  margin: 32px auto 0 auto;
+}
+
+.about .about__content a {
+  color: #292929;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.about .about__content a:hover {
+  color: #36ACCF;
+}
+
+.about .about__content ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
 footer {
   width: 100%;
   padding: 48px 2%;
@@ -451,7 +503,7 @@ footer {
   padding: 16px 2%;
 }
 
-footer .container, footer .postsBox #readPost, .postsBox footer #readPost {
+footer .container, footer .postsBox #readPost, .postsBox footer #readPost, footer .about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,7 +516,7 @@ footer .container, footer .postsBox #readPost, .postsBox footer #readPost {
 }
 
 @media screen and (max-width: 768px) {
-  footer .container, footer .postsBox #readPost, .postsBox footer #readPost {
+  footer .container, footer .postsBox #readPost, .postsBox footer #readPost, footer .about {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -514,6 +566,21 @@ footer .developer ul li a:hover {
   color: #36ACCF;
 }
 
+@media screen and (max-width: 768px) {
+  footer .developer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .developer h3 {
+    margin: 0;
+  }
+  footer .developer li {
+    margin: 8px 0;
+  }
+}
+
 footer a {
   color: white;
   font-size: 1.4rem;
@@ -521,6 +588,7 @@ footer a {
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
   font-size: 1.25rem;
+  margin: 16px 0;
 }
 
 footer a:hover {
@@ -530,8 +598,26 @@ footer a:hover {
 .credits {
   width: 100%;
   background-color: #6DD1AE;
-  padding: 48px 2%;
+  padding: 130px 2%;
   text-align: center;
+}
+
+.credits .container, .credits .postsBox #readPost, .postsBox .credits #readPost, .credits .about {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  background-color: rgba(41, 41, 41, 0.2);
+  border-radius: 50%;
+  padding: 48px 2%;
+  position: relative;
+}
+
+.credits ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .credits ul li {
@@ -553,5 +639,21 @@ footer a:hover {
 
 .credits ul li a:hover {
   color: #36ACCF;
+}
+
+@media screen and (max-width: 768px) {
+  .credits .container, .credits .postsBox #readPost, .postsBox .credits #readPost, .credits .about {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .credits .container, .credits .postsBox #readPost, .postsBox .credits #readPost, .credits .about {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

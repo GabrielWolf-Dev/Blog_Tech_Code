@@ -79,6 +79,14 @@
     vertical-align: top;
 }
 
+.boxBlack--active {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba( #000000, 0.6);
+    position: fixed;
+    transition: all ease 0.3s;
+}
+
 .lastPosts {
     @include defaultBox($white);
     text-align: center;

@@ -37,11 +37,24 @@ footer {
                 }
             }
         }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+
+            h3 {
+                margin: 0;
+            }
+
+            li {
+                margin: 8px 0;
+            }
+        }
     }
 
     a {
         @include defaultLink($white);
         font-size: 1.25rem;
+        margin: 16px 0;
 
         &:hover {
             color: $whiteBlue;

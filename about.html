@@ -29,9 +29,9 @@
     <title>Blog Tech Code</title>
 </head>
 <body>
-    <div id="boxBlack"></div><!--boxBlack-->
-
     <header>
+        <div id="boxBlack"></div><!--boxBlack-->
+
         <div class="container">
             <a href="index.html"><img class="logo" src="./assets/svg/code.svg" alt="Logo do site" /></a>
             <nav>
@@ -41,26 +41,59 @@
                 <ul id="nav">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">Sobre</a></li>
+                    <li><a href="#Creditos">Creditos</a></li>
                 </ul>
             </nav><!--menuDesktop-->
         </div><!--container-->
     </header>
-    
-    <section class="credits">
-        <div class="container">
-            <ul>
-                <li><a target="__blank" href="https://undraw.co/">Vetores de undraw</a></li>
-                <li><a target="__blank" href="https://fontawesome.com/">Ícones de Font Awesome</a></li>
-                <li>Icons made by <a target="__blank" href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a target="__blank" href="https://www.flaticon.com/"title="Flaticon">www.flaticon.com</a></li>
-                <li>
-                    Foto de <a target="__blank" href="https://www.pexels.com/pt-br/@luis-gomes-166706">Luiz Gomes</a>
-                    em <a target="__blank" href="https://www.pexels.com/pt-br/">Pexels</a>
-                </li>
-            </ul>
-        </div><!--container-->
-    </section><!--credits-->
 
+    <main class="about">
+        <h1 class="title">O que é Blog Tech Code?</h1>
+        <img src="./assets/img/code.jpg" alt="Notebook utilizando uma IDE para programar" />
+        <div class="about__content">
+            <p class="paragraph">
+                A Blog Tech Code é um blog estático com o intuito de
+                trazer informações relevantes para fins de curiosidade e estudo sobre
+                o mundo da programação e tecnologia em geral.
+            </p><!--paragraph-->
+            <p class="paragraph">
+                Também foi criado como portfólio de Gabriel Wolf, desenvolvedor Front-End.
+                Caso tenha interesse, você pode analizar o código fonte do projeto no
+                <a href="https://github.com/GabrielWolf-Dev/Blog_Tech_Code">Github de Gabriel</a>.
+            </p><!--paragraph-->
+            <h2 class="subtitle">Tecnologias:  &#128187</h2>
+            <ul>
+                <li>HTML 5</li>
+                <li>SASS</li>
+                <li>Javascript</li>
+            </ul>
+        </div><!--about__content-->
+    </main><!--about-->
+
+    <section class="knowMore">
+        <div class="container">
+            <h2 class="subtitle">Saiba mais</h2><!--subtitle-->
+            <ul id="categoriesList"></ul>
+        </div><!--container-->
+    </section><!--knowMore-->
+
+    <footer id="Creditos">
+        <div class="container">
+            <div class="developer">
+                <h3>Desenvolvido por Gabriel Wolf</h3>
+                <ul>
+                    <li>
+                        <a target="__blank" href="https://github.com/GabrielWolf-Dev"><i class="fab fa-github-square"></i></a>
+                    </li>
+                    <li>
+                        <a target="__blank" href="https://www.linkedin.com/in/gabriel-wolf-frontend/"><i class="fab fa-linkedin"></i></i></a>
+                    </li>
+                </ul>
+            </div><!--developer-->
+            <a href="credits.html">Creditos</a>
+        </div><!--container-->
+    </footer>
     <script src="./js/scripts/tools/all.min.js"></script>
-    <script src="./js/credits.js" type="module"></script>
+    <script src="./js/about.js" type="module"></script>
 </body>
 </html>

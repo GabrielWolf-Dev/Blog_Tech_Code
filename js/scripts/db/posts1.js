@@ -12,7 +12,6 @@ const blogs = [
         categories: [
             "Big Data"
         ],
-        mainCategory: "Big Data"
     },
     {
         id: 2,
@@ -27,7 +26,6 @@ const blogs = [
         categories: [
             "Big Data"
         ],
-        mainCategory: "Big Data"
     },
     {
         id: 3,
@@ -42,7 +40,6 @@ const blogs = [
         categories: [
             "Big Data"
         ],
-        mainCategory: "Big Data"
     },
     {
         id: 4,
@@ -57,7 +54,6 @@ const blogs = [
         categories: [
             "Big Data"
         ],
-        mainCategory: "Big Data"
     },
     {
         id: 5,
@@ -72,7 +68,6 @@ const blogs = [
         categories: [
             "Big Data"
         ],
-        mainCategory: "Big Data"
     },
     {
         id: 6,
@@ -87,7 +82,6 @@ const blogs = [
         categories: [
             "Big Data"
         ],
-        mainCategory: "Big Data"
     },
     {
         id: 7,
@@ -102,7 +96,6 @@ const blogs = [
         categories: [
             "Big Data"
         ],
-        mainCategory: "Big Data"
     },
     {
         id: 8,
@@ -117,7 +110,6 @@ const blogs = [
         categories: [
             "Big Data"
         ],
-        mainCategory: "Big Data"
     },
     {
         id: 9,
@@ -133,7 +125,6 @@ const blogs = [
             "Back-End",
             "Graph QL"
         ],
-        mainCategory: "Back-End"
     },
     {
         id: 10,
@@ -148,7 +139,6 @@ const blogs = [
         categories: [
             "Front-End"
         ],
-        mainCategory: "Front-End"
     },
     {
         id: 11,
@@ -164,7 +154,6 @@ const blogs = [
             "Big Data",
             "Back-End"
         ],
-        mainCategory: "Big Data"
     },
 ];
 
