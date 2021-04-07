@@ -5,7 +5,6 @@ export default function readPost() {
 
     blogs.forEach((blog) => {
         if(blog.id === Number(localStorage.getItem('idPost'))){
-            console.log('entrou!!');
             currentPost.innerHTML += `
                 <h1><a target="__blank" class="title" href="${blog.link}">${blog.title}</a></h1>
                 <div class="boxAuthor">
@@ -15,8 +14,6 @@ export default function readPost() {
                 </div><!--boxAuthor-->
                 ${blog.content}
             `;
-        }else {
-            console.log('não entro');
         }
     });
 }
