@@ -14,9 +14,18 @@ export default function showPosts() {
                         <h3 class="authorName">${post.author}</h3><!--authorName-->
                         <div class="post__content">
                             <a class="post__title" href="post.html" data-id=${post.id}>${post.title}</a>
-                            <p class="post__description">${post.description}</p><!--post__description-->
+                            <p class="post__description">
+                                ${post.description}
+                                <a class="readMore" href="post.html" data-id=${post.id}>Ler mais</a>
+                            </p><!--post__description-->
                         </div><!--post__content-->
-                        ${post.categories.map((category) => `<button class="btnPosts">${category}</button><!--button-->`).join(' ')}
+                        <button class="btnPosts">
+                            ${
+                                post.categories.map((category) => `
+                                    <a class="subContent" style="margin-right: 16px;" data-category href="posts.html">${category}</a><!--subContent-->
+                                `).join(' ')
+                            }
+                        </button><!--button-->
                     </article><!--post-->
                 `;
             }

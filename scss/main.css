@@ -74,7 +74,8 @@ ul {
 }
 
 .btnPosts {
-  margin: 8px;
+  width: 100%;
+  margin: 8px 0;
   cursor: auto;
 }
 
@@ -153,6 +154,20 @@ ul {
   text-align: left;
 }
 
+.lastPosts .posts .post .thumbnail {
+  width: 100%;
+  min-height: 150px;
+  border-radius: 12px;
+  margin: 16px 0;
+  padding: 0 2%;
+}
+
+@media screen and (max-width: 320px) {
+  .lastPosts .posts .post .thumbnail {
+    min-height: 80px;
+  }
+}
+
 .lastPosts .posts .post .post__content {
   padding: 24px 0;
 }
@@ -164,6 +179,10 @@ ul {
 }
 
 .lastPosts .posts .post .post__content .post__title:hover {
+  color: #36ACCF;
+}
+
+.lastPosts .posts .post .post__content .readMore {
   color: #36ACCF;
 }
 

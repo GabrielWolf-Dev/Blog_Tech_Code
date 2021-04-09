@@ -42,8 +42,9 @@
 }
 
 .btnPosts {
+    width: 100%;
     @extend .button;
-    margin: 8px;
+    margin: 8px 0;
     cursor: auto;
 }
 
@@ -109,6 +110,18 @@
                 @extend .imgAuthor;
             }
 
+            .thumbnail {
+                width: 100%;
+                min-height: 150px;
+                border-radius: 12px;
+                margin: 16px 0;
+                padding: 0 2%;
+
+                @media screen and (max-width: 320px) {
+                    min-height: 80px;
+                }
+            }
+
             .post__content {
                 padding: 24px 0;
 
@@ -124,6 +137,10 @@
 
                 .post__description {
                     @extend .paragraph;
+                }
+
+                .readMore {
+                    color: $whiteBlue;
                 }
             }
         }
