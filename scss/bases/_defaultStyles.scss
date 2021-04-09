@@ -44,6 +44,7 @@
 .btnPosts {
     @extend .button;
     margin: 8px;
+    cursor: auto;
 }
 
 .activeMenu {

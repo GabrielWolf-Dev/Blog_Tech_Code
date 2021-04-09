@@ -1,8 +1,5 @@
 const categories = [
-    "Big Data",
-    "Front-End",
-    "Back-End",
-    "Graph QL"
+    "Data Science",
 ];
 
 export default categories;

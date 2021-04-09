@@ -6,7 +6,7 @@ const minimum = totalBlogs - 5;
 
 export default function showLastPosts() {
     blogs.forEach((posts) => {
-        if(posts.id >= minimum){ // Max de Last Posts serão 10.
+        if(posts.id >= minimum){
             lastPosts.innerHTML += `
             <article class="post">
                 <img class="post__author" src="${posts.imgAuthor}"  alt="Author do post" />

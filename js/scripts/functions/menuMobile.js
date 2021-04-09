@@ -5,6 +5,7 @@ export default function menuMobile() {
     const links = document.querySelectorAll("nav ul li a[href^='#']");
     let isMobile = nav.getAttribute('data-menu');
     
+
     iconMobile.addEventListener('click', () => {
         toggleMenu();
         if(isMobile == "false"){
@@ -18,6 +19,13 @@ export default function menuMobile() {
             isMobile = "false";
         }
     }));
+
+    boxBlack.addEventListener('click', () => {
+        if(isMobile == "true"){
+            toggleMenu();
+            isMobile = "false";
+        }
+    });
 
     
     function toggleMenu() {

@@ -75,6 +75,7 @@ ul {
 
 .btnPosts {
   margin: 8px;
+  cursor: auto;
 }
 
 .activeMenu {
