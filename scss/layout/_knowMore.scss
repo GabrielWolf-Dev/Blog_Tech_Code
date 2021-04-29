@@ -1,6 +1,8 @@
 .knowMore {
-    @include defaultBox($aquaGreen);
+    @include defaultBox($white);
+    max-width: 800px;
     height: 250px;
+    margin: 0 auto;
 
     ul {
         padding: 24px 2%;

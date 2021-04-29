@@ -37,28 +37,21 @@
     padding: 8px 2%;
     border-radius: 12px;
     border: 2px solid $whiteBlue;
-    background-color: $aquaGreen;
+    background-color: $white;
     cursor: pointer;
 }
 
-.btnPosts {
-    width: 100%;
-    @extend .button;
-    margin: 8px 0;
-    cursor: auto;
+.line {
+    width: 50%;
+    height: 4px;
+    border-radius: 25%;
+    background-color: $cianBlue;
+    margin: 0 auto;
 }
 
 .activeMenu {
     clip-path: circle(1200px at 90% -10%);
     opacity: 1;
-}
-
-.post {
-    width: 100%;
-    max-width: 350px;
-    padding: 16px 2%;
-    background-color: $aquaGreen;
-    border-radius: 12px;
 }
 
 .imgAuthor {
@@ -98,32 +91,32 @@
     }
 
     .posts {
-        @include flex(center);
-        flex-wrap: wrap;
+        width: 100%;
+        padding: 16px 2%;
+        border-radius: 12px;
+        border: 3px solid $cianBlue;
 
         .post {
-            display: inline-block;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin: 16px;
             text-align: left;
+
+            main {
+                padding: 16px;
+
+                a {
+                    color: $whiteBlue;
+                }
+            }
                         
             .post__author {
                 @extend .imgAuthor;
             }
 
-            .thumbnail {
-                width: 100%;
-                min-height: 150px;
-                border-radius: 12px;
-                margin: 16px 0;
-                padding: 0 2%;
-
-                @media screen and (max-width: 320px) {
-                    min-height: 80px;
-                }
-            }
-
             .post__content {
-                padding: 24px 0;
+                margin: 16px 0;
 
                 .post__title {
                     @extend .subtitle;
@@ -135,12 +128,40 @@
                     }
                 }
 
-                .post__description {
-                    @extend .paragraph;
+                .description {
+                    margin: 16px 0;
+
+                    p {
+                        @extend .paragraph;
+                        display: inline;
+                    }
                 }
 
                 .readMore {
                     color: $whiteBlue;
+                    display: inline;
+                    @extend .subContent;
+                }
+            }
+
+            .thumbnail {
+                width: 100%;
+                max-width: 450px;
+                min-height: 150px;
+                border-radius: 12px;
+
+                @media screen and (max-width: 960px) {
+                    max-width: 300px;
+                    height: 200px;
+                }
+
+                @media screen and (max-width: 660px) {
+                    max-width: 200px;
+                    height: 80px;
+                }
+
+                @media screen and (max-width: 580px) {
+                    display: none;
                 }
             }
         }

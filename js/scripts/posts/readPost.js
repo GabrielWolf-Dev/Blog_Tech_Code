@@ -1,4 +1,4 @@
-import blogs from '../db/posts1.js';
+import blogs from '../../db/posts1.js';
 
 export default function readPost() {
     const currentPost = document.getElementById('readPost');

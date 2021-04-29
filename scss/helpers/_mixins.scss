@@ -11,9 +11,9 @@
     text-align: left;
 }
 
-@mixin mainStyle() {
+@mixin mainStyle($padding) {
     width: 100%;
-    padding: 128px 0;
+    padding: $padding;
     background-color: $white;
 }
 

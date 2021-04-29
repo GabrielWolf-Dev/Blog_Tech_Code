@@ -1,5 +1,5 @@
 .postsBox {
-    @include mainStyle();
+    @include mainStyle(130px 0 0 0);
     text-align: center;
 
     #readPost {

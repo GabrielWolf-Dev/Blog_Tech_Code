@@ -1,5 +1,5 @@
 .home__main {
-    @include mainStyle();
+    @include mainStyle(24px 0);
 
     .banner {
         width: 100%;
@@ -28,7 +28,7 @@
     }
 
     .categories {
-        @include defaultBox($aquaGreen);
+        @include defaultBox($white);
 
         ul {
             padding: 24px 2%;

@@ -49,48 +49,42 @@ ul {
   color: #292929;
 }
 
-.paragraph, .lastPosts .posts .post .post__content .post__description, .postsBox #readPost p, .about .about__content ul, footer .developer h3 {
+.paragraph, .lastPosts .posts .post .post__content .description p, .postsBox #readPost p, .about .about__content ul, footer .developer h3 {
   font-size: 1.4rem;
   font-weight: 400;
   color: #292929;
   padding: 16px 0;
 }
 
-.subContent, .authorName {
+.subContent, .authorName, .lastPosts .posts .post .post__content .readMore {
   font-size: 1.25rem;
   font-weight: lighter;
   color: #292929;
   padding: 16px 0;
 }
 
-.button, .btnPosts {
+.button {
   width: 120px;
   min-height: 42px;
   padding: 8px 2%;
   border-radius: 12px;
   border: 2px solid #36ACCF;
-  background-color: #6DD1AE;
+  background-color: white;
   cursor: pointer;
 }
 
-.btnPosts {
-  width: 100%;
-  margin: 8px 0;
-  cursor: auto;
+.line {
+  width: 50%;
+  height: 4px;
+  border-radius: 25%;
+  background-color: #073447;
+  margin: 0 auto;
 }
 
 .activeMenu {
   -webkit-clip-path: circle(1200px at 90% -10%);
           clip-path: circle(1200px at 90% -10%);
   opacity: 1;
-}
-
-.post {
-  width: 100%;
-  max-width: 350px;
-  padding: 16px 2%;
-  background-color: #6DD1AE;
-  border-radius: 12px;
 }
 
 .imgAuthor, .lastPosts .posts .post .post__author {
@@ -135,41 +129,36 @@ ul {
 }
 
 .lastPosts .posts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  width: 100%;
+  padding: 16px 2%;
+  border-radius: 12px;
+  border: 3px solid #073447;
 }
 
 .lastPosts .posts .post {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 16px;
   text-align: left;
 }
 
-.lastPosts .posts .post .thumbnail {
-  width: 100%;
-  min-height: 150px;
-  border-radius: 12px;
-  margin: 16px 0;
-  padding: 0 2%;
+.lastPosts .posts .post main {
+  padding: 16px;
 }
 
-@media screen and (max-width: 320px) {
-  .lastPosts .posts .post .thumbnail {
-    min-height: 80px;
-  }
+.lastPosts .posts .post main a {
+  color: #36ACCF;
 }
 
 .lastPosts .posts .post .post__content {
-  padding: 24px 0;
+  margin: 16px 0;
 }
 
 .lastPosts .posts .post .post__content .post__title {
@@ -182,8 +171,44 @@ ul {
   color: #36ACCF;
 }
 
+.lastPosts .posts .post .post__content .description {
+  margin: 16px 0;
+}
+
+.lastPosts .posts .post .post__content .description p {
+  display: inline;
+}
+
 .lastPosts .posts .post .post__content .readMore {
   color: #36ACCF;
+  display: inline;
+}
+
+.lastPosts .posts .post .thumbnail {
+  width: 100%;
+  max-width: 450px;
+  min-height: 150px;
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 960px) {
+  .lastPosts .posts .post .thumbnail {
+    max-width: 300px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .lastPosts .posts .post .thumbnail {
+    max-width: 200px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .lastPosts .posts .post .thumbnail {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -193,10 +218,10 @@ ul {
   .subtitle, .lastPosts .posts .post .post__content .post__title {
     font-size: 1.4rem;
   }
-  .paragraph, .lastPosts .posts .post .post__content .post__description, .postsBox #readPost p, .about .about__content ul, footer .developer h3 {
+  .paragraph, .lastPosts .posts .post .post__content .description p, .postsBox #readPost p, .about .about__content ul, footer .developer h3 {
     font-size: 1.15rem;
   }
-  .subContent, .authorName {
+  .subContent, .authorName, .lastPosts .posts .post .post__content .readMore {
     font-size: 1rem;
   }
 }
@@ -305,7 +330,7 @@ header ul li a:hover {
 
 .home__main {
   width: 100%;
-  padding: 128px 0;
+  padding: 24px 0;
   background-color: white;
 }
 
@@ -361,7 +386,7 @@ header ul li a:hover {
 .home__main .categories {
   width: 100%;
   padding: 48px 2%;
-  background-color: #6DD1AE;
+  background-color: white;
 }
 
 .home__main .categories ul {
@@ -391,7 +416,7 @@ header ul li a:hover {
 
 .postsBox {
   width: 100%;
-  padding: 128px 0;
+  padding: 130px 0 0 0;
   background-color: white;
   text-align: center;
 }
@@ -435,7 +460,7 @@ header ul li a:hover {
     padding: 32px 4%;
     text-align: left;
   }
-  .postsBox #readPost .paragraph, .postsBox #readPost .lastPosts .posts .post .post__content .post__description, .lastPosts .posts .post .post__content .postsBox #readPost .post__description, .postsBox #readPost p, .postsBox #readPost .about .about__content ul, .about .about__content .postsBox #readPost ul, .postsBox #readPost footer .developer h3, footer .developer .postsBox #readPost h3 {
+  .postsBox #readPost .paragraph, .postsBox #readPost .lastPosts .posts .post .post__content .description p, .lastPosts .posts .post .post__content .description .postsBox #readPost p, .postsBox #readPost p, .postsBox #readPost .about .about__content ul, .about .about__content .postsBox #readPost ul, .postsBox #readPost footer .developer h3, footer .developer .postsBox #readPost h3 {
     font-size: 1.15rem;
   }
   .postsBox #readPost .boxAuthor {
@@ -447,8 +472,10 @@ header ul li a:hover {
 .knowMore {
   width: 100%;
   padding: 48px 2%;
-  background-color: #6DD1AE;
+  background-color: white;
+  max-width: 800px;
   height: 250px;
+  margin: 0 auto;
 }
 
 .knowMore ul {
@@ -475,7 +502,7 @@ header ul li a:hover {
 }
 
 .about {
-  padding: 130px 4%;
+  padding: 48px 4%;
 }
 
 .about img {
@@ -617,7 +644,7 @@ footer a:hover {
 
 .credits {
   width: 100%;
-  background-color: #6DD1AE;
+  background-color: #36ACCF;
   padding: 130px 2%;
   text-align: center;
 }
@@ -658,7 +685,7 @@ footer a:hover {
 }
 
 .credits ul li a:hover {
-  color: #36ACCF;
+  color: white;
 }
 
 @media screen and (max-width: 768px) {
