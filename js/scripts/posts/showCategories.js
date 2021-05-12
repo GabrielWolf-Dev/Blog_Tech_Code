@@ -1,4 +1,4 @@
-import categories from '../../categories.js';
+import categories from '../../api/categories.js';
 
 const sectionCategories = document.querySelector('.categories #categoriesList');
 const sectionKnowMore = document.querySelector('.knowMore #categoriesList');

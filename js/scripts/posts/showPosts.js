@@ -1,9 +1,9 @@
-import dataBlogs from '../../api/dataFetch.js';
+import responseData from '../../api/dataFetch.js';
 
 export default async function showPosts() {
     const posts = document.getElementById('posts');
     const title = document.querySelector('.title');
-    
+
     const data = await responseData.json();
 
     data.forEach((post) => {
@@ -27,7 +27,7 @@ export default async function showPosts() {
                             <i class="fas fa-tags"></i>
                             ${
                                 post.categories.map((category) => `
-                                    <a class="subContent" data-category href="posts.html">${category}</a><!--subContent-->
+                                    <a class="subContent" href="#">${category}</a><!--subContent-->
                                 `)
                             }
                         </main>

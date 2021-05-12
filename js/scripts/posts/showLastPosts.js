@@ -26,7 +26,7 @@ export default async function showLastPosts() {
                         <i class="fas fa-tags"></i>
                         ${
                             posts.categories.map((category) => `
-                                <a class="subContent" data-category href="posts.html">${category}</a><!--subContent-->
+                                <a class="subContent" href="#">${category}</a><!--subContent-->
                             `)
                         }
                 </main>

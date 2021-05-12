@@ -130,9 +130,6 @@ ul {
 
 .lastPosts .posts {
   width: 100%;
-  padding: 16px 2%;
-  border-radius: 12px;
-  border: 3px solid #073447;
 }
 
 .lastPosts .posts .post {
@@ -147,6 +144,9 @@ ul {
           align-items: center;
   margin: 16px;
   text-align: left;
+  border-radius: 12px;
+  border: 3px solid #073447;
+  padding: 16px 2%;
 }
 
 .lastPosts .posts .post main {
