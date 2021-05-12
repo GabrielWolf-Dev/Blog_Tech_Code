@@ -1,9 +1,10 @@
-import blogs from '../../db/posts1.js';
+import responseData from '../../api/dataFetch.js';
 
-export default function readPost() {
+export default async function readPost() {
     const currentPost = document.getElementById('readPost');
+    const data = await responseData.json();
 
-    blogs.forEach((blog) => {
+    data.forEach((blog) => {
         if(blog.id === Number(localStorage.getItem('idPost'))){
             currentPost.innerHTML += `
                 <h1><a target="__blank" class="title" href="${blog.link}">${blog.title}</a></h1>

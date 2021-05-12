@@ -1,10 +1,12 @@
-import blogs from '../../db/posts1.js';
+import dataBlogs from '../../api/dataFetch.js';
 
-export default function showPosts() {
+export default async function showPosts() {
     const posts = document.getElementById('posts');
     const title = document.querySelector('.title');
+    
+    const data = await responseData.json();
 
-    blogs.forEach((post) => {
+    data.forEach((post) => {
         post.categories.forEach((category => {
             if(category === localStorage.getItem('category')){
                 const description = post.description.replace(/<br>/g, "");

@@ -1,11 +1,13 @@
-import blogs from '../../db/posts1.js';
+import responseData from '../../api/dataFetch.js';
 
-const lastPosts = document.getElementById('lastPosts');
-const totalBlogs = blogs.length;
-const minimum = totalBlogs - 5;
+export default async function showLastPosts() {
+    const data = await responseData.json();
+    
+    const lastPosts = document.getElementById('lastPosts');
+    const totalBlogs = data.length;
+    const minimum = totalBlogs - 5;
 
-export default function showLastPosts() {
-    blogs.forEach((posts) => {
+    data.forEach((posts) => {
         if(posts.id >= minimum){
             const description = posts.description.replace(/<br>/g, "");
 
