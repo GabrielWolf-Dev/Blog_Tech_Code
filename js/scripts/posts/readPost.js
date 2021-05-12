@@ -1,7 +1,7 @@
-import responseData from '../../api/dataFetch.js';
-
 export default async function readPost() {
     const currentPost = document.getElementById('readPost');
+
+    const responseData = await fetch("https://raw.githubusercontent.com/GabrielWolf-Dev/Blog_Tech_Code/main/js/api/db.json");
     const data = await responseData.json();
 
     data.forEach((blog) => {
@@ -11,7 +11,7 @@ export default async function readPost() {
                 <div class="boxAuthor">
                     <img class="imgAuthor" src=${blog.imgAuthor} alt="Imagem de ${blog.author}" />
                     <h2 class="authorName">${blog.author}</h2>
-                    <h3 class="subContent">${blog.pubDate}</h3>
+                    <h4 class="subContent">${blog.pubDate}</h4>
                 </div><!--boxAuthor-->
                 ${blog.content}
             `;

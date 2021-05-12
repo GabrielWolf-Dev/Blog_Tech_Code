@@ -1,5 +1,6 @@
-export default function postsCategory() {
+export default function selectCategory() {
     const categories = document.querySelectorAll('[data-category]');
+    console.log(categories);
     
     categories.forEach(category => {
         category.addEventListener('mouseover', saveData);
@@ -7,7 +8,7 @@ export default function postsCategory() {
 }
 
 function saveData(element) {
-    //console.log(element.target.outerText);
+    console.log(element.target.outerText);
     const categoryValue = element.target.outerText;
     localStorage.removeItem('category');
     localStorage.setItem('category', categoryValue);

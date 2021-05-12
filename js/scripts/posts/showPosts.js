@@ -1,9 +1,8 @@
-import responseData from '../../api/dataFetch.js';
-
 export default async function showPosts() {
     const posts = document.getElementById('posts');
     const title = document.querySelector('.title');
 
+    const responseData = await fetch("https://raw.githubusercontent.com/GabrielWolf-Dev/Blog_Tech_Code/main/js/api/db.json");
     const data = await responseData.json();
 
     data.forEach((post) => {
@@ -27,7 +26,7 @@ export default async function showPosts() {
                             <i class="fas fa-tags"></i>
                             ${
                                 post.categories.map((category) => `
-                                    <a class="subContent" href="#">${category}</a><!--subContent-->
+                                    <span class="subContent">${category}</span><!--subContent-->
                                 `)
                             }
                         </main>
@@ -37,4 +36,14 @@ export default async function showPosts() {
             }
         }));
     });
+
+    // Storing the id of each post
+    const idPost = document.querySelectorAll('[data-id]');
+    idPost.forEach((id) => id.addEventListener('mouseover', selectPost));
+}
+
+function selectPost(element) {
+    const idValue = element.target.dataset.id;                                 
+    localStorage.removeItem('idPost');
+    localStorage.setItem('idPost', idValue); 
 }

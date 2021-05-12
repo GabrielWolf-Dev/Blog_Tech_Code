@@ -1,8 +1,7 @@
-import responseData from '../../api/dataFetch.js';
-
 export default async function showLastPosts() {
+    const responseData = await fetch("https://raw.githubusercontent.com/GabrielWolf-Dev/Blog_Tech_Code/main/js/api/db.json");
     const data = await responseData.json();
-    
+
     const lastPosts = document.getElementById('lastPosts');
     const totalBlogs = data.length;
     const minimum = totalBlogs - 5;
@@ -26,7 +25,7 @@ export default async function showLastPosts() {
                         <i class="fas fa-tags"></i>
                         ${
                             posts.categories.map((category) => `
-                                <a class="subContent" href="#">${category}</a><!--subContent-->
+                                <span class="subContent">${category}</span><!--subContent-->
                             `)
                         }
                 </main>
@@ -35,4 +34,14 @@ export default async function showLastPosts() {
         `;
         }
     });
+
+    // Storing the id of each post
+    const idPost = document.querySelectorAll('[data-id]');
+    idPost.forEach((id) => id.addEventListener('mouseover', selectPost));
+}
+
+function selectPost(element) {
+    const idValue = element.target.dataset.id;                                 
+    localStorage.removeItem('idPost');
+    localStorage.setItem('idPost', idValue); 
 }
