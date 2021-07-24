@@ -6,7 +6,7 @@ export default async function readPost() {
 
     data.forEach((blog) => {
         if(blog.id === Number(localStorage.getItem('idPost'))){
-            currentPost.innerHTML += `
+            currentPost.insertAdjacentHTML('beforeend',  `
                 <h1><a target="__blank" class="title" href="${blog.link}">${blog.title}</a></h1>
                 <div class="boxAuthor">
                     <img class="imgAuthor" src=${blog.imgAuthor} alt="Imagem de ${blog.author}" />
@@ -14,7 +14,7 @@ export default async function readPost() {
                     <h4 class="subContent">${blog.pubDate}</h4>
                 </div><!--boxAuthor-->
                 ${blog.content}
-            `;
+            `);
         }
     });
 }

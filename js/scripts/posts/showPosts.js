@@ -11,7 +11,7 @@ export default async function showPosts() {
                 const description = post.description.replace(/<br>/g, "");
 
                 title.textContent = `Posts ${localStorage.getItem('category')}`;
-                posts.innerHTML += `
+                posts.insertAdjacentHTML('beforeend', `
                     <article class="post">
                         <main>
                             <img class="post__author" src="${post.imgAuthor}"  alt="Author do post" />
@@ -32,7 +32,7 @@ export default async function showPosts() {
                         </main>
                         <img class="thumbnail" src=${post.thumbnail} alt="Imagem do post" />
                     </article><!--post-->
-                `;
+                `);
             }
         }));
     });

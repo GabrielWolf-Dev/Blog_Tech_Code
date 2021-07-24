@@ -1,6 +1,5 @@
 export default function selectCategory() {
     const categories = document.querySelectorAll('[data-category]');
-    console.log(categories);
     
     categories.forEach(category => {
         category.addEventListener('mouseover', saveData);
