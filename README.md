@@ -11,11 +11,12 @@ In addition to building all the logic to generate posts, show recent posts via J
 
 ## Technologies and Tools(Design):
 * HTML5;
-* SASS;
+* [SASS](https://sass-lang.com/);
 * JavaScript;
-* Figma;
+* [Webpack](https://webpack.js.org/);
+* [Figma](https://www.figma.com/);
   * Briefing;
-  * Adobe Color(Choose a color palette);
+  * [Adobe Color](https://color.adobe.com/pt/explore)(Choose a color palette).
 
 ## My challenges:
 - [x] HTML5 semantics;
@@ -23,8 +24,10 @@ In addition to building all the logic to generate posts, show recent posts via J
 - [x] Style with SASS;
 - [x] Logic last posts;
 - [x] Select and filter posts with respect categories;
-- [x] Some functions, for example the Menu mobile, Smooth scroll, etc...
+- [x] Some functions, for example the Menu mobile, Smooth scroll, etc...;
+- [x] Make more accessible adding WAI-ARIA in some functions and elements of blog;
+- [x] Insert more posts before publishing the project;
+- [x] Make a webpack file for minify and bundles JavaScript files.
 
-## Future implementations:
-* Make more accessible adding WAI-ARIA in some functions and elements of blog;
-* Insert more posts before publishing the project
+## Demonstration Project:
+![Gif Demo Blog Tech Code](https://raw.githubusercontent.com/GabrielWolf-Dev/Blog_Tech_Code/main/assets/blog-gif.gif)

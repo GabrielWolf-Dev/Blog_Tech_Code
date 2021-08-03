@@ -1,0 +1,24 @@
+{
+  "name": "blog_tech_code",
+  "version": "1.0.0",
+  "description": "A blog that have to help other developers",
+  "main": "index.js",
+  "scripts": {
+    "webpack-dev": "webpack --mode development --config webpack.config.js",
+    "webpack-prod": "webpack --mode production --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielWolf-Dev/Blog_Tech_Code.git"
+  },
+  "author": "Gabriel Wolf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GabrielWolf-Dev/Blog_Tech_Code/issues"
+  },
+  "homepage": "https://github.com/GabrielWolf-Dev/Blog_Tech_Code#readme",
+  "dependencies": {
+    "webpack": "^5.48.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
